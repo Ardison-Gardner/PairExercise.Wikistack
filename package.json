@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Wikistack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+},
+  "author": "Melinda Ling & Gregory Ardison-Gardnerx",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-config-fullstack": "^6.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "express": "^4.16.4",
+    "html-template-tag": "^2.0.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.6.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.41.1"
+  }
+}
