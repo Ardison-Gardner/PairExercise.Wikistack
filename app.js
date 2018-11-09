@@ -5,7 +5,7 @@ const morgan = require('morgan');
 
 //Routers
 // const user = require('./routes/user.js');
-// const wiki = require('./routes/wiki.js');
+const wiki = require('./routes/wiki.js');
 
 // const { addPage } = require('./views');
 
@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
-// app.use('/wiki', wiki);
+app.use('/wiki', wiki);
 // app.use('User', user);
 
 //PORT configuration.
@@ -49,17 +49,5 @@ init();
 // })
 
 app.use('/', (req, res, next) => {
-  res.send('<h1>Welcome to the root.</h1>');
+  res.send(require('./views/main')());
 });
-
-// router.get('/', (req, res, next) => {
-//   res.send('got to GET /wiki/');
-// });
-
-// router.send('/',(req, res, next) => {
-//   res.send('got to POST /wiki/');
-// });
-
-// router.get('/add', (req, res, next) => {
-//   res.send('got to GET /wiki/add');
-// });
